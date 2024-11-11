@@ -145,7 +145,19 @@ function validateStep(step) {
         e.preventDefault();
 
         if (validateStep(currentStep)) {
-            alert('Form submitted successfully!');
+            let formData = $(this).serialize();
+            
+    
+            $.ajax({
+                type:"POST",
+                url: '../loads/action.php',
+                data: formData,
+                success:function(data){
+                    alert(data);
+                    window.location.href = './../partial/registeredAnnouncement.php';
+                    $('#multi-step-form')[0].reset(); 
+                }
+            })
         } else {
             alert('Please fix the errors before submitting the form.');
         }
