@@ -45,8 +45,12 @@ try {
     ]);
     // Check if the data was inserted successfully
     if ($exe) {
+        //get the last inserted student id
+        $studentID = $pdo->lastInsertId();
+        
         echo "Data Added Successfully!";
         $_SESSION['registered'] = true;
+        $_SESSION['studentID'] = $studentID;
         return false;
         exit();
     } else {

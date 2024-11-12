@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="card">
-            <p class="center">You are registered We will send email for you exam sooner and please come to the school with you data printed, download your <a href="#">Here</a></p>
+            <p class="center">You are registered We will send email for you exam sooner and please come to the school with you data printed, download your <a href="pdf.php" target="_blank">Here</a></p>
         </div>
     </div>
 </body>
